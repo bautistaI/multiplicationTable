@@ -1,0 +1,26 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+.body{
+	line-height: 1.5;
+}
+h1{
+	text-align: center;
+}
+.wrapper{
+	width: 500px;
+	margin: 0 auto;
+}
+.my-table{
+	text-align: center;
+	font-size: 18px;
+	margin: 20px auto;
+}
+.my-table td{
+	padding: 5px;
+	border: 1px solid #BADA55;
+}
+input{
+	width: 200px;
+	margin-left: 32%;
+}

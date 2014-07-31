@@ -24,3 +24,8 @@ input{
 	width: 200px;
 	margin-left: 32%;
 }
+/*hover effect for table*/
+.hover{
+	background: orange;
+	color: #FFF;
+}

@@ -10,12 +10,17 @@
   <body ng-cloak class="ng-cloak">
   	<div class="wrapper">
   		<h1>Multiplication Table</h1>
-      
+
       <div ng-controller="MultiplicationCtrl" initial-number-limit="10">
         <input type="number" ng-model="numberLimit" placeholder="Enter a number">
         <table class="my-table">
           <tr ng-repeat="numberA in numbers">
-            <td ng-repeat="numberB in numbers">
+            <!-- Set hover with class hover and mouse event -->
+            <td ng-repeat="numberB in numbers"
+              ng-mouseleave = "clearActiveFactors()"
+              ng-mouseover="setActiveFactors(numberA, numberB)"
+              ng-class="{hover: matchesFactor(numberA, numberB)}">
+          
               {{ compute(numberA, numberB) }}
             </td>
           </tr>

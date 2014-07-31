@@ -17,5 +17,18 @@ angular.module('myApp', [])
     });
     // the $attrs reads the initial-number-limit from the template, it looks for initial-dash-spaced-name
     $scope.numberLimit = $attrs.initialNumberLimit || 10;
+    // hover logic
+    var activeFactorA, activerFactorB;
+    // set scope for ng-mouseover
+    $scope.setActiveFactors = function(a,b){
+        activeFactorA = a;
+        activerFactorB = b;
+    };
+    $scope.matchesFactor = function(a,b){
+        return a === activeFactorA || b === activerFactorB;
+    };
+    $scope.clearActiveFactors = function(){
+        activeFactorA = activerFactorB = null;
+    };
 });
 
